@@ -14,7 +14,7 @@ const Profile = () => {
 
   })
   const navigate = useNavigate()
-  const { addNewContact } = useContext(UserContext);
+  const { handleEdit } = useContext(UserContext);
 
   const handleChangeContact = (event) => {
     console.log(event.target.name);
@@ -22,7 +22,7 @@ const Profile = () => {
     setContact({ ...contact, [event.target.name]: event.target.value });
   };
 const newContact = () => {
-addNewContact(contact)
+handleEdit(contact)
 navigate("/")
 }
 
